@@ -331,20 +331,20 @@ System.register("pagination-controls-cmp", ['@angular/core', "pagination-service
                     configurable: true
                 });
                 PaginationControlsCmp.prototype.ngOnInit = function () {
+                    var _this = this;
                     if (this.id === undefined) {
                         this.id = this.service.defaultId;
                     }
                     this.updatePageLinks();
+                    if (this.template && 0 < this.template.nativeElement.children.length) {
+                        this.hasTemplate = true;
+                        setTimeout(function () { return _this.changeDetectorRef.markForCheck(); });
+                    }
                 };
                 PaginationControlsCmp.prototype.ngOnChanges = function () {
                     this.updatePageLinks();
                 };
                 PaginationControlsCmp.prototype.ngAfterViewInit = function () {
-                    var _this = this;
-                    if (this.template && 0 < this.template.nativeElement.children.length) {
-                        this.hasTemplate = true;
-                        setTimeout(function () { return _this.changeDetectorRef.markForCheck(); });
-                    }
                 };
                 PaginationControlsCmp.prototype.ngOnDestroy = function () {
                     this.changeSub.unsubscribe();

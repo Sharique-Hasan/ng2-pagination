@@ -56,6 +56,10 @@ export class PaginationControlsCmp {
             this.id = this.service.defaultId;
         }
         this.updatePageLinks();
+        if (this.template && 0 < this.template.nativeElement.children.length) {
+            this.hasTemplate = true;
+            setTimeout(() => this.changeDetectorRef.markForCheck());
+        }
     }
 
     ngOnChanges() {
@@ -63,10 +67,7 @@ export class PaginationControlsCmp {
     }
 
     ngAfterViewInit() {
-        if (this.template && 0 < this.template.nativeElement.children.length) {
-            this.hasTemplate = true;
-            setTimeout(() => this.changeDetectorRef.markForCheck());
-        }
+        
     }
 
     ngOnDestroy() {
