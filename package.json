@@ -1,6 +1,6 @@
 {
-  "name": "ng2-pagination",
-  "version": "0.3.5",
+  "name": "ng2-paginate",
+  "version": "0.1.0",
   "description": "Pagination for Angular 2",
   "main": "index.js",
   "scripts": {
@@ -25,12 +25,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelbromley/ng2-pagination"
+    "url": "https://github.com/Sharique-Hasan/ng2-pagination"
   },
   "bugs": {
-    "url": "https://github.com/michaelbromley/ng2-pagination/issues"
+    "url": "https://github.com/Sharique-Hasan/ng2-pagination/issues"
   },
-  "author": "Michael Bromley <michael@michaelbromley.co.uk>",
+  "author": "Sharique Hasan <shssuetce@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@angular/common": "2.0.0-rc.4",
